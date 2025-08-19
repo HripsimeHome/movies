@@ -3,10 +3,18 @@ import ImageWebp from "../../layout/ImageWebp/ImageWebp";
 import Svg from "../../layout/Svg/Svg";
 
 import { JacobWebpImage } from "../../../assets/images";
-import { JaneRightBottomIcon } from "../../../assets/svg";
+import { searchIcon, clockIcon } from "../../../assets/svg";
 
 const SidebarMenu = () => {
-  return <section className={styles.sidebarMenu}>Menu</section>;
+  return (
+    <section className={styles.sidebarMenu}>
+      Menu
+      {/* <span>
+        <Svg id={searchIcon} /> Search
+      </span>
+      <Svg id={clockIcon} /> */}
+    </section>
+  );
 };
 
 export default SidebarMenu;

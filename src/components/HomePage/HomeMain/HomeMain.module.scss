@@ -2,8 +2,10 @@
 @import "../../../styles/vars";
 
 .homeMain {
-  //  position: relative;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+
   padding-left: 160px;
   @include bgWebp(
     "../../../assets/images/home/coverImage.png",
@@ -11,5 +13,5 @@
   );
   background-position: right center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
 }

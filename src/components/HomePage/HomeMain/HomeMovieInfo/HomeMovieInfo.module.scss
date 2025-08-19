@@ -3,16 +3,39 @@
 
 .homeMovieInfo {
   display: flex;
-  flex: 1;
   flex-direction: column;
-  max-width: 460px;
+  justify-content: center;
+  flex: 1;
+  gap: 15px;
+  max-width: 500px;
 
   &__category {
+    @include setFont(17px, 400, #858688);
     text-transform: uppercase;
-    @include setFont(1rem, 400, #737375);
+    letter-spacing: 4px;
   }
 
-  &__title {
-    text-transform: uppercase;
+  &__img {
+    max-width: 90%;
+  }
+
+  &__details {
+    @include setFont(16px, 300);
+  }
+
+  &__description {
+    @include setFont(18px, 300);
+    line-height: 26px;
+  }
+
+  &__btnContainer {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+  }
+
+  &__icon {
+    @include svg(14px);
+    margin-right: 7px;
   }
 }
