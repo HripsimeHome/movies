@@ -14,8 +14,16 @@
   transition: $transition;
   padding: 15px 40px;
 
+  &:hover {
+    background: linear-gradient(90deg, #001671 0%, #2727f5 100%);
+  }
+
   &_whiteBg {
     color: $color-black;
     background: $color-white;
+
+    &:hover {
+      background: $color-secondary;
+    }
   }
 }

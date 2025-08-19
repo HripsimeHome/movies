@@ -5,7 +5,21 @@
   position: fixed;
   height: 100vh;
   width: 40px;
-  background-color: #1e1e1e;
-  padding-left: 60px;
-  padding-right: 60px;
+  background-color: $color-black;
+  padding: 60px;
+
+  &__userBlock {
+    @include flexCol();
+    gap: 10px;
+  }
+
+  &__userName {
+    @include setFont(17px, 500);
+  }
+
+  &__avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }
 }
