@@ -1,0 +1,31 @@
+// Media breakpoints
+$xsm-screen: 360px;
+$sm-screen: 576px;
+$md-screen: 768px;
+$lg-screen: 1024px;
+$xl-screen: 1200px;
+$xxl-screen: 1440px;
+
+// Font family
+$font-family: "Inter", sans-serif;
+
+// Font sizes
+$font-xxsm: 0.8125rem; // 13px
+$font-xsm: 0.875rem; // 14px
+$font-sm: 0.9375rem; // 15px
+$font-base: 1rem; // 16px
+$font-md: 1.125rem; // 18px
+$font-lg: 1.25rem; // 20px
+$font-xl: 1.375rem; // 22px
+$font-xxl: 1.5rem; // 24px
+
+// Colors
+$color-white: #f1f1f1;
+$color-black: #040404;
+$color-primary: linear-gradient(90deg, #2727f5 0%, #001671 100%);
+$color-secondary: #3b486d;
+$color-red: #e53935;
+
+// Transitions
+$transition: all 0.3s;
+$transitionEaseOut: all 0.3s ease-out 0s;

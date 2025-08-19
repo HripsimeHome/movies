@@ -1,0 +1,15 @@
+@import "../../../styles/mixins";
+@import "../../../styles/vars";
+
+.homeMain {
+  //  position: relative;
+  height: 100vh;
+  padding-left: 160px;
+  @include bgWebp(
+    "../../../assets/images/home/coverImage.png",
+    "../../../assets/images/home/coverImage.webp"
+  );
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
