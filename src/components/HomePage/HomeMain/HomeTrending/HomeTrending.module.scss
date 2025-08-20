@@ -1,7 +1,24 @@
 @import "../../../../styles/mixins";
 @import "../../../../styles/vars";
 
-.homeMovieInfo {
+.homeTrending {
   position: absolute;
   bottom: 0;
+
+  &__title {
+    @include setFont(18px, 400);
+    margin-bottom: 15px;
+  }
+
+  &__sliderContainer {
+    //display: flex;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 15px;
+  }
+
+  &__img {
+    max-width: 100px;
+    // max-height: 296px;
+  }
 }
