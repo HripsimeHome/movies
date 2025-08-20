@@ -1,7 +1,7 @@
-import HomeError from "../HomeError/HomeError";
 import styles from "./HomeMain.module.scss";
 import HomeMovieInfo from "./HomeMovieInfo/HomeMovieInfo";
 import HomeTrending from "./HomeTrending/HomeTrending";
+import HomeError from "../HomeError/HomeError";
 import { useEffect, useState } from "react";
 
 const VIDEO_PLAY_TIMEOUT_MS = 2000;
@@ -11,6 +11,7 @@ const HomeMain = () => {
   const [trendingNowData, setTrendingNowData] = useState([]);
   const [errored, setErrored] = useState(false);
   const [coverVideoUrl, setCoverVideoUrl] = useState("");
+
   const fetchData = async () => {
     try {
       const res = await fetch("/data.json");
