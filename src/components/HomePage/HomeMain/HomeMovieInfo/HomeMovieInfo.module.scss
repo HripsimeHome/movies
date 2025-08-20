@@ -4,11 +4,10 @@
 .homeMovieInfo {
   display: flex;
   flex-direction: column;
-  //justify-content: center;
+  justify-content: center;
   flex: 1;
   gap: 15px;
   max-width: 500px;
-  margin-top: 100px;
 
   &__category {
     @include setFont(17px, 400, $color-grey);
@@ -28,7 +27,18 @@
     @include setFont(18px, 300);
     line-height: 26px;
   }
-
+  &__titleImgDraft {
+    height: 50px;
+    width: 100%;
+  }
+  &__detailsDraft {
+    height: 20px;
+    width: 100%;
+  }
+  &__descriptionDraft {
+    height: 20px;
+    width: 100%;
+  }
   &__btnContainer {
     display: flex;
     gap: 15px;

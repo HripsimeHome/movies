@@ -8,3 +8,4 @@ export const clockIcon = "clock";
 
 // Home
 export const playIcon = "play";
+export const errorIcon = "error";

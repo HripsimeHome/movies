@@ -1,0 +1,19 @@
+@import "../../../styles/mixins";
+@import "../../../styles/vars";
+
+.homeError {
+  @include flexCol();
+  flex-direction: column;
+  gap: 10px;
+  height: 100%;
+  width: 100%;
+  background-color: $color-black;
+
+  &__icon {
+    @include svg(40px, $color-red);
+  }
+  &__text {
+    @include setFont(20px, 400);
+    text-align: center;
+  }
+}
