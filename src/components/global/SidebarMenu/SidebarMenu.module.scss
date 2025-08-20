@@ -4,13 +4,13 @@
 .sidebarMenu {
   position: fixed;
   height: 100vh;
-  width: 40px;
+  min-width: 40px;
   background-color: $color-black;
   padding: 60px;
 
   &__userBlock {
-    @include flexCol();
-    gap: 10px;
+    @include flexCol(start);
+    gap: 12px;
   }
 
   &__userName {
@@ -18,8 +18,56 @@
   }
 
   &__avatar {
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
     border-radius: 50%;
+  }
+
+  &__itemContainer {
+    display: flex;
+    flex-direction: column;
+    min-width: 160px;
+  }
+
+  &__menuLink {
+    @include setFont(16px, 500);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin: 10px 0;
+    padding: 10px 15px;
+    cursor: pointer;
+
+    &:hover {
+      transition: $transitionEaseOut;
+      background-color: $color-secondary;
+      border-radius: 10px;
+    }
+
+    &_active {
+      background-color: $color-secondary;
+      border-radius: 10px;
+
+      &:hover {
+        cursor: default;
+      }
+    }
+  }
+
+  &__icon {
+    @include svg(25px);
+  }
+
+  // Footer
+  &__footer {
+    position: absolute;
+    left: 10px;
+    bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    @include setFont(17px, 500, $color-grey);
+    text-transform: uppercase;
+    text-decoration: none;
   }
 }

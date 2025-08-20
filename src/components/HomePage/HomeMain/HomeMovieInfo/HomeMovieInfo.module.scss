@@ -10,7 +10,7 @@
   max-width: 500px;
 
   &__category {
-    @include setFont(17px, 400, #858688);
+    @include setFont(17px, 400, $color-grey);
     text-transform: uppercase;
     letter-spacing: 4px;
   }
