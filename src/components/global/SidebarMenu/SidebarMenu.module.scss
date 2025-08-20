@@ -5,8 +5,11 @@
   position: fixed;
   height: 100vh;
   min-width: 40px;
+  display: flex;
+  flex-direction: column;
   background-color: $color-black;
-  padding: 60px;
+  padding: 50px;
+  padding-bottom: 30px;
 
   &__userBlock {
     @include flexCol(start);
@@ -14,7 +17,7 @@
   }
 
   &__userName {
-    @include setFont(17px, 500);
+    @include setFont(18px, 700);
   }
 
   &__avatar {
@@ -23,32 +26,31 @@
     border-radius: 50%;
   }
 
-  &__itemContainer {
+  &__itemsContainer {
     display: flex;
     flex-direction: column;
+    flex: 1;
     min-width: 160px;
+    margin-top: 20px;
   }
 
   &__menuLink {
+    @include flexCol(start);
+    gap: 25px;
     @include setFont(16px, 500);
     text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 25px;
-    margin: 10px 0;
+    margin: 5px 0;
     padding: 10px 15px;
     cursor: pointer;
 
-    &:hover {
-      transition: $transitionEaseOut;
+    &:hover,
+    &_active {
+      transition: $transition-ease-out;
       background-color: $color-secondary;
       border-radius: 10px;
     }
 
     &_active {
-      background-color: $color-secondary;
-      border-radius: 10px;
-
       &:hover {
         cursor: default;
       }
@@ -60,14 +62,33 @@
   }
 
   // Footer
-  &__footer {
-    position: absolute;
-    left: 10px;
-    bottom: 60px;
-    display: flex;
-    flex-direction: column;
-    @include setFont(17px, 500, $color-grey);
-    text-transform: uppercase;
-    text-decoration: none;
+  &__footerLink {
+    a,
+    button {
+      display: flex;
+      flex-direction: column;
+      gap: 100px;
+      @include setFont(15px, 500, $color-grey);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-decoration: none;
+      margin-top: 10px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 0;
+
+      &:hover,
+      &_active {
+        transition: $transition-ease-out;
+        color: $color-white;
+      }
+
+      &_active {
+        &:hover {
+          cursor: default;
+        }
+      }
+    }
   }
 }

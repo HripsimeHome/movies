@@ -1,5 +1,5 @@
 import styles from "./SidebarMenu.module.scss";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { avatarImage } from "../../../assets/images";
 import Svg from "../../layout/Svg/Svg";
 
@@ -9,7 +9,8 @@ import {
   showsPagePath,
   moviesPagePath,
   genresPagePath,
-  watchLaterPage,
+  watchLaterPagePath,
+  getHelpPagePath,
 } from "../../../router/path";
 
 import {
@@ -50,7 +51,7 @@ const menuItem = [
   {
     icon: clockIcon,
     title: "Watch Later",
-    link: watchLaterPage,
+    link: watchLaterPagePath,
   },
 ];
 
@@ -66,7 +67,7 @@ const SidebarMenu = () => {
         <span className={styles.sidebarMenu__userName}>Daniel</span>
       </div>
 
-      <div className={styles.sidebarMenu__itemContainer}>
+      <div className={styles.sidebarMenu__itemsContainer}>
         {menuItem.map(({ icon, title, link }, index) => (
           <NavLink
             to={link}
@@ -83,10 +84,13 @@ const SidebarMenu = () => {
           </NavLink>
         ))}
       </div>
+      {/* /itemsContainer */}
 
-      {/* <nav className={styles.sidebarMenu__footer}>
-        <NavLink>languages get help exit</NavLink>
-      </nav> */}
+      <nav className={styles.sidebarMenu__footerLink}>
+        <Link>languages</Link>
+        <Link to={getHelpPagePath}>get help</Link>
+        <button>Exit</button>
+      </nav>
     </section>
   );
 };

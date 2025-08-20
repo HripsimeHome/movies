@@ -4,8 +4,8 @@ import styles from "./HomeTrending.module.scss";
 
 const HomeTrending = () => {
   return (
-    <section className={styles.HomeTrending}>
-      <div className={styles.HomeTrending__title}>Trending New</div>
+    <section className={styles.homeTrending}>
+      <div className={styles.homeTrending__title}>Trending New</div>
     </section>
   );
 };

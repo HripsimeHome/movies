@@ -4,6 +4,7 @@ import ShowsPage from "../pages/ShowsPage";
 import MoviesPage from "../pages/MoviesPage";
 import GenresPage from "../pages/GenresPage";
 import WatchLaterPage from "../pages/WatchLaterPage";
+import GetHelpPage from "../pages/GetHelpPage";
 import ErrorPage from "../pages/ErrorPage";
 
 // Paths
@@ -12,7 +13,8 @@ export const searchPagePath = "search";
 export const showsPagePath = "shows";
 export const moviesPagePath = "movies";
 export const genresPagePath = "genres";
-export const watchLaterPage = "watchLater";
+export const watchLaterPagePath = "watchlater";
+export const getHelpPagePath = "help";
 
 // Routes
 export const routes = [
@@ -37,8 +39,12 @@ export const routes = [
     component: <GenresPage />,
   },
   {
-    path: watchLaterPage,
+    path: watchLaterPagePath,
     component: <WatchLaterPage />,
+  },
+  {
+    path: getHelpPagePath,
+    component: <GetHelpPage />,
   },
   {
     path: "*",

@@ -3,10 +3,9 @@
 
 .homeMain {
   height: 100vh;
+  padding-left: 160px;
   display: flex;
   flex-direction: column;
-
-  padding-left: 160px;
   @include bgWebp(
     "../../../assets/images/home/coverImage.png",
     "../../../assets/images/home/coverImage.webp"
