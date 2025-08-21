@@ -17,15 +17,10 @@
     z-index: -1;
   }
 
-  &__bgVideo {
+  &__bgMedia {
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
-
-  &__bgImg {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    object-position: right;
   }
 }

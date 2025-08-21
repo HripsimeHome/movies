@@ -12,6 +12,7 @@
   &__icon {
     @include svg(40px, $color-red);
   }
+
   &__text {
     @include setFont(20px, 400);
     text-align: center;

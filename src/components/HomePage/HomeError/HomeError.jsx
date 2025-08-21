@@ -1,7 +1,7 @@
-import React from "react";
+import styles from "./HomeError.module.scss";
 import Svg from "../../layout/Svg/Svg";
 import { errorIcon } from "../../../assets/svg";
-import styles from "./HomeError.module.scss";
+
 const HomeError = () => {
   return (
     <div className={styles.homeError}>

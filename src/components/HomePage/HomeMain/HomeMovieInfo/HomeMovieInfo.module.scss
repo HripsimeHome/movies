@@ -7,6 +7,7 @@
   justify-content: center;
   flex: 1;
   gap: 15px;
+  //min-height: 400px;
   max-width: 500px;
 
   &__category {
@@ -26,17 +27,6 @@
   &__description {
     @include setFont(18px, 300);
     line-height: 26px;
-  }
-
-  &__titleImgDraft {
-    height: 50px;
-    width: 100%;
-  }
-
-  &__detailsDraft,
-  &__descriptionDraft {
-    height: 20px;
-    width: 100%;
   }
 
   &__btnContainer {

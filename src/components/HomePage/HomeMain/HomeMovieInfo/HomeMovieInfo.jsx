@@ -2,18 +2,20 @@ import styles from "./HomeMovieInfo.module.scss";
 import { useNavigate } from "react-router-dom";
 import { formatDuration } from "../../../../utils/formatDuration";
 import MainBtn from "../../../layout/MainBtn/MainBtn";
+import { moviesPagePath } from "../../../../router/path";
 import Svg from "../../../layout/Svg/Svg";
 import { playIcon } from "../../../../assets/svg";
-import { moviesPagePath } from "../../../../router/path";
 
 const HomeMovieInfo = ({ featuredData }) => {
   const navigate = useNavigate();
 
   return (
     <section className={styles.homeMovieInfo}>
-      <span className={styles.homeMovieInfo__category}>movie</span>
-      {featuredData ? (
+      {featuredData && (
         <>
+          <span className={styles.homeMovieInfo__category}>
+            {featuredData.Category}
+          </span>
           <img
             src={`/trending/titles/${featuredData.TitleImage}`}
             alt={featuredData.Title}
@@ -26,12 +28,6 @@ const HomeMovieInfo = ({ featuredData }) => {
           <p className={styles.homeMovieInfo__description}>
             {featuredData.Description}
           </p>
-        </>
-      ) : (
-        <>
-          <div className={styles.homeMovieInfo__titleImgDraft} />
-          <div className={styles.homeMovieInfo__detailsDraft} />
-          <div className={styles.homeMovieInfo__descriptionDraft} />
         </>
       )}
       <div className={styles.homeMovieInfo__btnContainer}>

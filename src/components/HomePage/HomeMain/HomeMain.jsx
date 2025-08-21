@@ -1,8 +1,8 @@
 import styles from "./HomeMain.module.scss";
+import { useEffect, useState } from "react";
 import HomeMovieInfo from "./HomeMovieInfo/HomeMovieInfo";
 import HomeTrending from "./HomeTrending/HomeTrending";
 import HomeError from "../HomeError/HomeError";
-import { useEffect, useState } from "react";
 
 const VIDEO_PLAY_TIMEOUT_MS = 2000;
 
@@ -58,7 +58,7 @@ const HomeMain = () => {
               muted
               autoPlay
               loop
-              className={styles.homeMain__bgVideo}
+              className={styles.homeMain__bgMedia}
             ></video>
           ) : (
             <>
@@ -66,7 +66,7 @@ const HomeMain = () => {
                 <img
                   src={`/trending/covers/${featuredData.CoverImage}`}
                   alt={featuredData.Title}
-                  className={styles.homeMain__bgImg}
+                  className={styles.homeMain__bgMedia}
                 />
               )}
             </>
