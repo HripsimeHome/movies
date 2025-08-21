@@ -4,27 +4,31 @@
 .sidebarMenu {
   position: fixed;
   height: 100vh;
-  min-width: 0px;
+  //min-width: 0;
   display: flex;
   flex-direction: column;
-  background-color: $color-black;
+
   background: linear-gradient(
     90deg,
     rgba(4, 4, 4, 1) 35%,
     rgba(4, 4, 4, 0) 100%
   );
-  padding: 50px 30px 30px;
-  z-index: 5;
-  opacity: 0;
-  transition: $transition-ease-out;
+  padding: 50px 10px 30px;
+  z-index: 3;
+  opacity: 1;
+  width: 80px; // collapsed state
+  transition: width 0.4s ease;
 
   &:hover {
-    min-width: 780px;
-    opacity: 1;
-    transition: $transition-ease-out;
+    // max-width: 780px;
+    width: 700px;
   }
 
   &__userBlock {
+    display: none;
+  }
+
+  &:hover &__userBlock {
     @include flexCol(start);
     gap: 12px;
   }
@@ -43,8 +47,12 @@
     display: flex;
     flex-direction: column;
     flex: 1;
-    min-width: 160px;
+    //min-width: 0; /* was 160px */
     margin-top: 20px;
+  }
+
+  &:hover &__itemsContainer {
+    //min-width: 160px;
   }
 
   &__menuLink {
@@ -71,19 +79,25 @@
     }
   }
 
+  &__title {
+    display: none;
+  }
+
+  &:hover &__title {
+    display: inline;
+  }
+
   &__icon {
     @include svg(25px);
   }
 
-  // Footer
+  /* Footer */
   &__footerLink {
-    display: flex;
     align-items: start;
     flex-direction: column;
     gap: 15px;
-  }
+    display: none;
 
-  &__footerLink {
     a,
     button {
       @include setFont(15px, 500, $color-grey);
@@ -107,5 +121,9 @@
         }
       }
     }
+  }
+
+  &:hover &__footerLink {
+    display: flex;
   }
 }

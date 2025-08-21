@@ -74,13 +74,14 @@ const SidebarMenu = () => {
             key={index}
             className={({ isActive }) =>
               isActive
-                ? `${styles.sidebarMenu__menuLink} ${styles.sidebarMenu__menuLink_active}`
+                ? `${styles.sidebarMenu__menuLink}
+                   ${styles.sidebarMenu__menuLink_active}`
                 : styles.sidebarMenu__menuLink
             }
             rel="noreferrer"
           >
             <Svg id={icon} className={styles.sidebarMenu__icon} />
-            <span>{title}</span>
+            <span className={styles.sidebarMenu__title}>{title}</span>
           </NavLink>
         ))}
       </div>

@@ -1,15 +1,14 @@
 import styles from "./HomeMovieInfo.module.scss";
 import { useNavigate } from "react-router-dom";
+import { formatDuration } from "../../../../utils/formatDuration";
 import MainBtn from "../../../layout/MainBtn/MainBtn";
-import { titleImage } from "../../../../assets/images";
 import Svg from "../../../layout/Svg/Svg";
 import { playIcon } from "../../../../assets/svg";
-
 import { moviesPagePath } from "../../../../router/path";
-import { formatDuration } from "../../../../utils/formatDuration";
 
 const HomeMovieInfo = ({ featuredData }) => {
   const navigate = useNavigate();
+
   return (
     <section className={styles.homeMovieInfo}>
       <span className={styles.homeMovieInfo__category}>movie</span>
